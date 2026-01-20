@@ -25,14 +25,14 @@ This system digitizes the conventional motorcycle credit process, making it easi
 ---
 
 ## Project Structure
----text
+```text
 KreditMotor/
 ├── backend/ # PHP backend source code
 ├── database/ # MySQL database (.sql)
 ├── android-app/ # Android Studio project
 ├── apk/ # Compiled APK file
 └── README.md
-
+```
 
 ---
 
@@ -84,4 +84,5 @@ Local IP address of the server
 - REST API
 - Android Studio
 - XAMPP
+
 
