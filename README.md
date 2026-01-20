@@ -25,7 +25,7 @@ This system digitizes the conventional motorcycle credit process, making it easi
 ---
 
 ## Project Structure
-
+---text
 KreditMotor/
 ├── backend/ # PHP backend source code
 ├── database/ # MySQL database (.sql)
@@ -84,3 +84,4 @@ Local IP address of the server
 - REST API
 - Android Studio
 - XAMPP
+
