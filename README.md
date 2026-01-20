@@ -1,132 +1,86 @@
-PANDUAN LENGKAP INSTALASI APLIKASI KREDIT MOTOR
-📦 FILE YANG DIBERIKAN
-1. DATABASE SQL
+# Motorcycle Credit Application System
 
-File: jskreditmotor(2).sql
-2. BACKEND PHP
+## Overview
+A mobile and web-based application designed to manage motorcycle credit applications, approvals, and customer data efficiently.
 
-File: jskreditmotor (2).zip
-3. ANDROID PROJECT
+This system digitizes the conventional motorcycle credit process, making it easier for administrators and customers to manage credit submissions and monitoring.
 
-File: client5.zip
-4. APK SIAP INSTAL
+---
 
-File: app-debug.apk
-🚀 LANGKAH INSTALASI
+## Features
+- Motorcycle credit application
+- Admin approval system
+- Customer and credit data management
+- Installment and payment monitoring
+- Simple reporting and data tracking
 
+---
 
-STEP 1: INSTAL XAMPP
-    Download XAMPP: https://www.apachefriends.org/
-    Install dengan next-next-finish
-    Buka XAMPP Control Panel
-    START: Apache dan MySQL
+## System Architecture
+- **Mobile App**: Android (Java)
+- **Backend**: PHP
+- **Database**: MySQL
+- **Server**: Apache (XAMPP)
 
-STEP 2: IMPORT DATABASE
-    Buka: http://localhost/phpmyadmin
-    Klik New → Nama: jskreditmotor → Create
-    Klik Import → pilih jskreditmotor(2).sql → Go
+---
 
-STEP 3: SETUP PHP BACKEND
-    Ekstrak jskreditmotor (2).zip
-    Copy semua file ke: C:\xampp\htdocs\jskreditmotor\
-    Test: Buka http://localhost/jskreditmotor/tblogin.php
+## Project Structure
 
-STEP 4: KONFIGURASI ANDROID
-Untuk EMULATOR:
-public class Server {
-    public String urlServer = "10.0.2.2"; // Untuk emulator
-}
-
-Untuk DEVICE FISIK:
-    Cek IP server komputer:
-        Windows: Buka CMD → ketik ipconfig
-        Cari IPv4 Address (contoh: 192.168.1.100)
-    Edit file Server.java:
-
-STEP 5: INSTAL APLIKASI ANDROID
-OPSI A: Install APK Langsung
-    Copy app-debug.apk ke HP
-    Install APK (izinkan instalasi dari sumber tidak dikenal)
-
-OPSI B: Build dari Source
-    Ekstrak client5.zip
-    Buka di Android Studio
-    Edit IP server di Server.java
-    Build → Run ke device
-
-🔐 LOGIN DEFAULT
-Admin:
-    Username: admin
-    Password: admin123
-
-Pelanggan/Kreditor:
-    ERDIAN, JOIN, TRI, IKA, ZULFA NURUL, dll
-    Password: pelanggan123 (default)
-
-📱 DATA PELANGGAN YANG SUDAH ADA
-Nama		Pekerjaan	Telepon		Alamat
-ERDIAN		Karyawan	0812233400	Jl. Garuda
-JOIN		Mahasiswa	0812345		Jl. Majapahit
-TRI		SATPAM		08123		Jl. Bentang
-IKA		GURU		0812333		Jl. Kanguru
-ZULFA NURUL	MAHASISWA	081234566	Jl. Majapahit
+KreditMotor/
+├── backend/ # PHP backend source code
+├── database/ # MySQL database (.sql)
+├── android-app/ # Android Studio project
+├── apk/ # Compiled APK file
+└── README.md
 
 
-✅ TESTING
-    Test Server:
-        Buka: http://localhost/jskreditmotor/tbmotor.php
-        Harus return data JSON
+---
 
-    Test Aplikasi Android:
-        Login Admin: admin / admin123
-        Login Pelanggan: pilih nama pelanggan + password123
+## Installation Guide
 
-    Test Fitur:
-        Data Motor
-        Data Kreditor/Pelanggan
-        Pengajuan Kredit
-        Pembayaran Angsuran
+### 1. Backend & Database
+1. Install XAMPP
+2. Start Apache & MySQL
+3. Create a database in phpMyAdmin
+4. Import the provided `.sql` file
+5. Place backend files in:
 
-⚙️ STRUKTUR KONEKSI YANG DIGUNAKAN
-Berdasarkan kode Anda, aplikasi menggunakan:
-Class Koneksi:
-    Untuk HTTP GET requests
-    Timeout: 15 detik
-    Method: GET
+C:\xampp\htdocs\kreditmotor\
 
-Class Server:
-    Menyimpan alamat server
-    Default: "10.0.2.2" (emulator)
 
-URL Format yang digunakan:
-http://[ip_server]/jskreditmotor/[file_php]
-Contoh: http://10.0.2.2/jskreditmotor/tbmotor.php
+---
 
-❌ TROUBLESHOOTING
+### 2. Android Application
+- Install APK directly on Android device  
+**OR**
+- Open Android project in Android Studio and build manually
 
-Problem: Koneksi gagal
-// Solusi: Pastikan IP server benar
-public class Server {
-    public String urlServer = "192.168.1.100"; // IP server sebenarnya
-}
+For emulator, use:
 
-Problem: Data tidak tampil
-    Pastikan folder PHP di jskreditmotor bukan kreditmotor
-    Test URL di browser HP: http://[ip_server]/jskreditmotor/tbmotor.php
-Problem: Database error
-    Pastikan database db_kreditmotor sudah diimport
-    Cek koneksi di koneksi.php
+10.0.2.2
 
-Problem: APK tidak bisa install
-    Enable "Install from unknown sources" di Android Settings
 
-📞 SUPPORT
+For physical device, use:
 
-Jika ada masalah:
-    Pastikan XAMPP Apache & MySQL running
-    Cek IP server di Server.java sudah benar
-    Test koneksi dari browser HP
-    Pastikan folder PHP: jskreditmotor
+Local IP address of the server
 
-Untuk Emulator: gunakan 10.0.2.2
-Untuk Device Fisik: gunakan IP komputer server
+
+---
+
+## Default Login
+**Admin**
+- Username: `admin`
+- Password: `admin123`
+
+**Customer**
+- Default password: `pelanggan123`
+
+---
+
+## Technologies Used
+- Java (Android)
+- PHP
+- MySQL
+- REST API
+- Android Studio
+- XAMPP
